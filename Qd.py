@@ -1,7 +1,7 @@
 # Q: d. Write a SQL statement to insert rows into a table called highAchiever(Name, Age),
 # where a salesperson must have a salary of 100,000 or greater to be included in the table.
 
-import sqlite3
+import sqlite3 
 
 conn = sqlite3.connect('data.db')
 c = conn.cursor()
