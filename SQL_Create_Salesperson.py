@@ -4,15 +4,14 @@ conn = sqlite3.connect('data.db')
 c = conn.cursor()
 
 # only run one time
-#c.execute(''' CREATE TABLE Salesperson (
-#            ID integer,
- #           Name text,
-  #          Age integer,
-   #         Salary integer)
-   #     ''')
+c.execute(''' CREATE TABLE Salesperson (
+            ID integer,
+            Name text,
+            Age integer,
+            Salary integer)
+        ''')
 #only run one time
-c.execute("DELETE FROM Salesperson")
-conn.commit()
+
 c.execute('''INSERT INTO Salesperson VALUES
             (1, 'Abe', 61, 140000),
             (2, 'Bob', 34, 44000),
@@ -26,5 +25,5 @@ conn.commit()
 c.execute("SELECT * FROM Salesperson")
 print(c.fetchall())
 
-conn.commit()  # execute the sql command
+conn.commit()  
 conn.close()
