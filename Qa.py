@@ -12,5 +12,5 @@ c.execute('''SELECT s.Name
 
 print(c.fetchall())
 
-conn.commit()  # execute the sql command
+conn.commit()  
 conn.close()
