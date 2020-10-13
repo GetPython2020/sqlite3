@@ -3,17 +3,14 @@ import sqlite3
 conn = sqlite3.connect('data.db')
 c = conn.cursor()
 
-#c.execute("DROP TABLE Orders")
-#conn.commit()
-
 # only run one time
-#c.execute(''' CREATE TABLE Orders (
-#            Number integer,
- #           order_date text,
-  #          cust_id integer,
-   #         salesperson_id integer,
-    #        Amount integer)
-     #  ''')
+c.execute(''' CREATE TABLE Orders (
+            Number integer,
+            order_date text,
+            cust_id integer,
+            salesperson_id integer,
+            Amount integer)
+       ''')
 
 c.execute("DELETE FROM Orders")
 conn.commit()
@@ -33,5 +30,5 @@ conn.commit()
 c.execute("SELECT * FROM Orders")
 print(c.fetchall())
 
-conn.commit()  # execute the sql command
+conn.commit() 
 conn.close()
