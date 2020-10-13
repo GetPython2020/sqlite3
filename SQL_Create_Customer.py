@@ -11,9 +11,6 @@ c.execute(''' CREATE TABLE Customer (
             Industry Type text)
        ''')
 
-c.execute("DELETE FROM Customer")
-conn.commit()
-
 #only run one time
 c.execute('''INSERT INTO Customer VALUES
             (4, 'Samsonic','pleasant','J'),
@@ -26,5 +23,5 @@ conn.commit()
 c.execute("SELECT * FROM Customer")
 print(c.fetchall())
 
-conn.commit()  # execute the sql command
+conn.commit() 
 conn.close()
