@@ -1,5 +1,6 @@
-# Q: find the largest order amount for each salesperson and the associated order number,
-# along with the customer to whom that order belongs to
+# Q: Table number contains many numbers in column num including duplicated ones.
+# Can you write a SQL query to find the biggest number, which only appears once.
+
 import sqlite3
 
 conn = sqlite3.connect('data_L.db')
